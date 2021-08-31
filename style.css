@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,400&display=swap');
+:root{
+--Moderate-violet: hsl(263, 55%, 52%);
+--Very-dark-grayish-blue: hsl(217, 19%, 35%);
+--Very-dark-blackish-blue: hsl(219, 29%, 14%);
+--White: hsl(0, 0%, 100%);
+
+--Light-gray: hsl(0, 0%, 81%);
+--Light-grayish-blue: hsl(210, 46%, 95%);
+}
+html{
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Light-grayish-blue);
+}
+main{
+    width: 85%;
+    margin: 4rem auto;
+}
+section{
+    margin-bottom: 1.5rem;
+    color: white;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    margin-bottom: 1.5rem;
+}
+h4{
+    font-size: 1.1rem;
+}
+.profile p{
+    opacity: 50%;
+}
+img{
+    border-radius: 50%;
+    width: 3rem;
+}
+
+h2{
+    font-size: 1.57rem;
+    margin-bottom: 1.5rem;
+}
+p{
+    opacity: 70%;
+}
+#one{
+    background-color: var(--Moderate-violet);
+}
+#one img{
+    border: 2px solid hsl(263, 97%, 75%);
+}
+#two{
+    background-color: var(--Very-dark-grayish-blue);
+}
+#three{
+    background-color: var(--White);
+    color: black;
+}
+
+#four{    
+    background-color: var(--Very-dark-blackish-blue);
+}
+#four img{
+    border: 2px solid var(--Moderate-violet);
+}
+#five{    
+    background-color: var(--White);
+    color: black;
+}
+
+@media only screen and (min-width:600px){
+    main{
+        width: 80%;
+        margin:1.7rem auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap:1rem;
+        grid-template-areas: "one one two five"
+                            "three four four five";
+    }
+    section{
+        margin-bottom: 0;
+    }
+    #one{
+      grid-area: one;
+    }
+    #two{
+        grid-area: two;
+    }
+    #three{
+      grid-area: three;
+      box-shadow: 7px 10px 5px rgba(8, 8, 8, 0.3);
+    }
+    #four{    
+       grid-area: four;
+    }
+    #five{    
+        grid-area: five;
+        box-shadow: 7px 10px 5px rgba(8, 8, 8, 0.3);
+    }
+}
