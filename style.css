@@ -81,9 +81,14 @@ p{
 }
 
 @media only screen and (min-width:600px){
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+    }
     main{
-        width: 80%;
-        margin:1.7rem auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-gap:1rem;
